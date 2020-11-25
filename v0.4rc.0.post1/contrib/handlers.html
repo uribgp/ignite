@@ -1001,7 +1001,7 @@ rates and what can be an optimal learning rate.</p>
 <p>fastai/lr_find: <a class="reference external" href="https://github.com/fastai/fastai">https://github.com/fastai/fastai</a></p>
 <dl class="py method">
 <dt id="ignite.contrib.handlers.lr_finder.FastaiLRFinder.attach">
-<code class="sig-name descname">attach</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ignite/contrib/handlers/lr_finder.html#FastaiLRFinder.attach"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ignite.contrib.handlers.lr_finder.FastaiLRFinder.attach" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">attach</code><span class="sig-paren">(</span><em class="sig-param">trainer</em>, <em class="sig-param">to_save</em>, <em class="sig-param">output_transform=&lt;function FastaiLRFinder.&lt;lambda&gt;&gt;</em>, <em class="sig-param">num_iter=None</em>, <em class="sig-param">end_lr=10.0</em>, <em class="sig-param">step_mode='exp'</em>, <em class="sig-param">smooth_f=0.05</em>, <em class="sig-param">diverge_th=5.0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ignite/contrib/handlers/lr_finder.html#FastaiLRFinder.attach"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ignite.contrib.handlers.lr_finder.FastaiLRFinder.attach" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches lr_finder to a given trainer. It also resets model and optimizer at the end of the run.</p>
 <p>Usage:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>to_save = {&quot;model&quot;: model, &quot;optimizer&quot;: optimizer}
@@ -2368,7 +2368,7 @@ NeptuneLogger class.</p>
 <a class="reference external" href="https://ui.neptune.ai/o/shared/org/pytorch-ignite-integration/e/PYTOR1-18/charts">https://ui.neptune.ai/o/shared/org/pytorch-ignite-integration/e/PYTOR1-18/charts</a></p>
 <dl class="py method">
 <dt id="ignite.contrib.handlers.neptune_logger.NeptuneSaver.remove">
-<code class="sig-name descname">remove</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../_modules/ignite/contrib/handlers/neptune_logger.html#NeptuneSaver.remove"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ignite.contrib.handlers.neptune_logger.NeptuneSaver.remove" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">remove</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../_modules/ignite/contrib/handlers/neptune_logger.html#NeptuneSaver.remove"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ignite.contrib.handlers.neptune_logger.NeptuneSaver.remove" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method to remove saved checkpoint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -4009,7 +4009,7 @@ directory will be created.</p></li>
 </div>
 <dl class="py method">
 <dt id="ignite.contrib.handlers.trains_logger.TrainsSaver.get_local_copy">
-<code class="sig-name descname">get_local_copy</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>str<span class="p">]</span><a class="reference internal" href="../_modules/ignite/contrib/handlers/trains_logger.html#TrainsSaver.get_local_copy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ignite.contrib.handlers.trains_logger.TrainsSaver.get_local_copy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_local_copy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>str<span class="p">]</span><a class="reference internal" href="../_modules/ignite/contrib/handlers/trains_logger.html#TrainsSaver.get_local_copy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ignite.contrib.handlers.trains_logger.TrainsSaver.get_local_copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get artifact local copy.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -4027,7 +4027,7 @@ directory will be created.</p></li>
 
 <dl class="py method">
 <dt id="ignite.contrib.handlers.trains_logger.TrainsSaver.remove">
-<code class="sig-name descname">remove</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ignite.contrib.handlers.trains_logger.TrainsSaver.remove" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">remove</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ignite.contrib.handlers.trains_logger.TrainsSaver.remove" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method to remove saved checkpoint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

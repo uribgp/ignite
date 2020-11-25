@@ -947,10 +947,15 @@ non-blocking. By default, CPU.</p></li>
 </dl>
 <dl class="py attribute">
 <dt id="ignite.metrics.Metric.required_output_keys">
-<code class="sig-name descname">required_output_keys</code><em class="property">: tuple</em><a class="headerlink" href="#ignite.metrics.Metric.required_output_keys" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">required_output_keys</code><a class="headerlink" href="#ignite.metrics.Metric.required_output_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>dictionary defines required keys to be found in <code class="docutils literal notranslate"><span class="pre">engine.state.output</span></code> if the
 latter is a dictionary. Default, <code class="docutils literal notranslate"><span class="pre">(&quot;y_pred&quot;,</span> <span class="pre">&quot;y&quot;)</span></code>. This is useful with custom metrics that can require
 other arguments than predictions <code class="docutils literal notranslate"><span class="pre">y_pred</span></code> and targets <code class="docutils literal notranslate"><span class="pre">y</span></code>. See notes below for an example.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)">tuple</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <div class="admonition note">
@@ -1129,7 +1134,7 @@ value is written to <cite>engine.state.metrics</cite> dictionary.</p>
 
 <dl class="py method">
 <dt id="ignite.metrics.Metric.iteration_completed">
-<code class="sig-name descname">iteration_completed</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/ignite/metrics/metric.html#Metric.iteration_completed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ignite.metrics.Metric.iteration_completed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">iteration_completed</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">engine</span><span class="p">:</span> <span class="n">ignite.engine.engine.Engine</span></em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="_modules/ignite/metrics/metric.html#Metric.iteration_completed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ignite.metrics.Metric.iteration_completed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Helper method to update metric’s computation. It is automatically attached to the
 <cite>engine</cite> with <a class="reference internal" href="#ignite.metrics.Metric.attach" title="ignite.metrics.Metric.attach"><code class="xref py py-meth docutils literal notranslate"><span class="pre">attach()</span></code></a>.</p>
 <dl class="field-list simple">
@@ -1496,8 +1501,13 @@ Valid events are from <a class="reference internal" href="engine.html#ignite.eng
 </ul>
 <dl class="py attribute">
 <dt id="ignite.metrics.EpochWise.usage_name">
-<code class="sig-name descname">usage_name</code><em class="property">: str</em><a class="headerlink" href="#ignite.metrics.EpochWise.usage_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">usage_name</code><a class="headerlink" href="#ignite.metrics.EpochWise.usage_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>usage name string</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -1514,8 +1524,13 @@ Valid events are from <a class="reference internal" href="engine.html#ignite.eng
 </ul>
 <dl class="py attribute">
 <dt id="ignite.metrics.BatchWise.usage_name">
-<code class="sig-name descname">usage_name</code><em class="property">: str</em><a class="headerlink" href="#ignite.metrics.BatchWise.usage_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">usage_name</code><a class="headerlink" href="#ignite.metrics.BatchWise.usage_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>usage name string</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
