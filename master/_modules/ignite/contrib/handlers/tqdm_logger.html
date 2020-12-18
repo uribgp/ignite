@@ -285,7 +285,7 @@
 
 <span class="kn">from</span> <span class="nn">ignite.contrib.handlers.base_logger</span> <span class="kn">import</span> <span class="n">BaseLogger</span><span class="p">,</span> <span class="n">BaseOutputHandler</span>
 <span class="kn">from</span> <span class="nn">ignite.engine</span> <span class="kn">import</span> <span class="n">Engine</span><span class="p">,</span> <span class="n">Events</span>
-<span class="kn">from</span> <span class="nn">ignite.engine.events</span> <span class="kn">import</span> <span class="n">CallableEventWithFilter</span>
+<span class="kn">from</span> <span class="nn">ignite.engine.events</span> <span class="kn">import</span> <span class="n">CallableEventWithFilter</span><span class="p">,</span> <span class="n">RemovableEventHandle</span>
 
 
 <div class="viewcode-block" id="ProgressBar"><a class="viewcode-back" href="../../../../contrib/handlers.html#ignite.contrib.handlers.tqdm_logger.ProgressBar">[docs]</a><span class="k">class</span> <span class="nc">ProgressBar</span><span class="p">(</span><span class="n">BaseLogger</span><span class="p">):</span>
@@ -482,7 +482,7 @@
 
 <div class="viewcode-block" id="ProgressBar.attach_opt_params_handler"><a class="viewcode-back" href="../../../../contrib/handlers.html#ignite.contrib.handlers.tqdm_logger.ProgressBar.attach_opt_params_handler">[docs]</a>    <span class="k">def</span> <span class="nf">attach_opt_params_handler</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">engine</span><span class="p">:</span> <span class="n">Engine</span><span class="p">,</span> <span class="n">event_name</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Events</span><span class="p">],</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RemovableEventHandle</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Intentionally empty&quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
